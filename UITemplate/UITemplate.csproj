@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFramework>net8.0-windows7.0</TargetFramework>
+	  <ImplicitUsings>enable</ImplicitUsings>
+	  <Nullable>enable</Nullable>
+	  <NuspecFile>UITemplate.nuspec</NuspecFile>
+	  <NuspecProperties>Configuration=Release</NuspecProperties>
+	  <!--<IncludeReferencedProjects>true</IncludeReferencedProjects>
+	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>-->
+	  <!-- NuGet Packaging -->
+	  <!--<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	  <IncludeReferencedProjects>true</IncludeReferencedProjects>
+	  <PackageId>UITemplate</PackageId>
+	  <Version>1.0.4</Version>
+	  <Authors>SKM</Authors>
+	  <Company>SKMCOMPANY</Company>
+	  <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>-->
+	  <!--<NoWarn>NU5128</NoWarn>-->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CacheHelper\NewCache.csproj" />
+    <ProjectReference Include="..\Common\Common.csproj" />
+  </ItemGroup>
+
+  <!--<ItemGroup>
+	  <ProjectReference Include="..\CacheHelper\NewCache.csproj">
+		  <PrivateAssets>all</PrivateAssets>
+	  </ProjectReference>
+	  <ProjectReference Include="..\Common\Common.csproj">
+		  <PrivateAssets>all</PrivateAssets>
+	  </ProjectReference>
+  </ItemGroup>
+
+	--><!-- ✅ Explicitly include DLLs as runtime assets --><!--
+	<Target Name="IncludeReferencedDlls" AfterTargets="Build">
+		<ItemGroup>
+			<_ReferencedDlls Include="@(ReferenceCopyLocalPaths)" />
+		</ItemGroup>
+	</Target>
+
+	<ItemGroup>
+		<None Include="..\CacheHelper\bin\$(Configuration)\net8.0\NewCache.dll" Pack="true" PackagePath="lib\net8.0" />
+		<None Include="..\Common\bin\$(Configuration)\net8.0-windows\Common.dll" Pack="true" PackagePath="lib\net8.0-windows" />
+	</ItemGroup>-->
+
+</Project>

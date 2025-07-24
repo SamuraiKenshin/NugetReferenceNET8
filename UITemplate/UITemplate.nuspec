@@ -1,0 +1,41 @@
+﻿<?xml version="1.0"?>
+<package>
+	<metadata>
+		<id>UITemplate</id>
+		<version>1.0.6</version>
+		<authors>SKM</authors>
+		<owners>SKMCompany</owners>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<license type="expression">MIT</license>
+		<description>
+			UITemplate library including embedded Project1 (net8.0) and Project2 (net8.0-windows7.0) DLLs.
+			This is an all-in-one NuGet package that does not require separate dependencies.
+		</description>
+		<tags>UITemplate Project1 Project2 embedded</tags>
+	</metadata>
+
+	<files>
+		<!-- Main UITemplate DLL (net8.0-windows7.0) -->
+		<file src="bin\Release\net8.0-windows7.0\UITemplate.dll"
+			  target="lib\net8.0-windows7.0" />
+
+		<!-- NewCache DLL (net8.0) -->
+		<file src="..\CacheHelper\bin\Release\net8.0-windows7.0\NewCache.dll"
+			  target="lib\net8.0-windows7.0" />
+
+		<!-- Common DLL (net8.0-windows7.0) -->
+		<file src="..\Common\bin\Release\net8.0-windows7.0\Common.dll"
+			  target="lib\net8.0-windows7.0" />
+
+		<!-- Optional: PDBs for debugging (remove if not needed) -->
+		<file src="bin\Release\net8.0-windows7.0\UITemplate.pdb"
+			  target="lib\net8.0-windows7.0" />
+		<file src="..\CacheHelper\bin\Release\net8.0-windows7.0\NewCache.pdb"
+			  target="lib\net8.0-windows7.0" />
+		<file src="..\Common\bin\Release\net8.0-windows7.0\Common.pdb"
+			  target="lib\net8.0-windows7.0" />
+
+		<!-- Optional: Include readme -->
+		<!--<file src="readme.md" target="" />-->
+	</files>
+</package>
