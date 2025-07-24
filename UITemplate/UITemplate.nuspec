@@ -2,7 +2,7 @@
 <package>
 	<metadata>
 		<id>UITemplate</id>
-		<version>1.0.6</version>
+		<version>1.0.7</version>
 		<authors>SKM</authors>
 		<owners>SKMCompany</owners>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -12,6 +12,11 @@
 			This is an all-in-one NuGet package that does not require separate dependencies.
 		</description>
 		<tags>UITemplate Project1 Project2 embedded</tags>
+		<dependencies>
+			<group targetFramework=".NETCoreApp8.0">
+				<dependency id="Newtonsoft.Json" version="13.0.3" />
+			</group>
+		</dependencies>
 	</metadata>
 
 	<files>
